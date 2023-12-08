@@ -21,22 +21,16 @@ const stripePayment = async (req, res) => {
     };
   });
   const session = await stripe.checkout.sessions.create({
-    // line_items: [
-    //   {
-    //     price_data: {
-    //       currency: "usd",
-    //       product_data: {
-    //         name: "T-shirt",
-    //       },
-    //       unit_amount: 2000,
-    //     },
-    //     quantity: 1,
-    //   },
-    // ],
     line_items: line_items,
     mode: "payment",
     success_url: `${CLIENT_URL}/checkout-success`,
     cancel_url: `${CLIENT_URL}/checkout-cancel`,
+     billing_address_collection: 'required', // or 'auto'
+
+    // Add shipping address collection
+    shipping_address_collection: {
+      allowed_countries: ['US', 'CA', 'BD'], // Specify the countries where shipping address is allowed
+    },
   });
 
   res.send({ url: session.url });
