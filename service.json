@@ -5,6 +5,6 @@
     "PORT": "4003",
     "JWT_SECRET_KEY": "JWT_SECRET_KEYwdgfjfjbghskhjjts",
     "STRIPE_SECRET_KEY": "sk_test_51MbbiGK3RZZOQUDyRQl4zzD9kSHU6weYV1wrxCkXxO94E4V5P8McJnOnGL1cXCaNf8TVouK23HMh97VwtbOlvX2700x2w8z7Qv",
-    "CLIENT_URL": "http://localhost:5173"
+    "CLIENT_URL": "https://checkout-integration-stripe.vercel.app"
   }
   
