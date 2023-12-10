@@ -42,7 +42,7 @@ userSchema.methods.generateJWT = function () {
         email: this.email,
         role: this.role,
         username: this.username,
-    },JWT_SECRET_KEY, { expiresIn: "2m" });
+    },JWT_SECRET_KEY, { expiresIn: "1h" });
 
     return token;
 
